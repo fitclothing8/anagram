@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anagram</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+    <!-- Firebase SDKs -->
+    <!-- Firebase UMD SDKs (Browser-safe) -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+
+
+    <!-- Initialize Firebase -->
+    <script>
+        if (typeof firebase === "undefined") {
+            console.error("Firebase SDK not loaded.");
+        } else {
+            const firebaseConfig = {
+                apiKey: "AIzaSyBj2qws17bro7EWxF48MX10aoHgvIdF8tA",
+                authDomain: "anagram-583bf.firebaseapp.com",
+                projectId: "anagram-583bf",
+                appId: "1:1051929128901:web:eaa4a34d3e6791b9df65ac"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+        }
+    </script>
+
+    <!-- Custom JS (must come after Firebase init) -->
+    <script src="js/firebase-auth.js"></script>
+    <script src="js/firebase-chat.js"></script>
+    <script src="js/firebase-status.js"></script>
+    <script src="~/js/contactService.js"></script>
+
+</head>
+
+<body>
+    <div id="app" class="loading-screen">
+        <!-- Top teal dot -->
+        <div class="loading-dot"></div>
+
+        <!-- Welcome text -->
+        <h2 class="welcome-text">
+            Welcome <span class="highlight">Gramist</span>
+        </h2>
+
+        <!-- App name in cursive -->
+        <h1 class="app-name">Anagram</h1>
+
+        <!-- Optional spinner -->
+        <div class="spinner"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <!-- Optional: Remove this if not using service worker -->
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>
