@@ -4,7 +4,14 @@
         db.collection("users").onSnapshot(snapshot => {
             const contacts = [];
             snapshot.forEach(doc => {
-                contacts.push({ id: doc.id, ...doc.data() });
+                const data = doc.data();
+                contacts.push({
+                    id: doc.id,
+                    displayName: data.displayName || "",
+                    email: data.email || "",
+                    status: data.status || "Offline",
+                    photoUrl: data.photoUrl || ""
+                });
             });
             dotNetRef.invokeMethodAsync("UpdateContacts", contacts);
         });

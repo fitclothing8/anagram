@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anagram</title>
     <base href="/" />
+
     <link rel="stylesheet" href="css/app.css" />
     <link href="manifest.webmanifest" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
 
     <!-- Firebase SDKs -->
-    <!-- Firebase UMD SDKs (Browser-safe) -->
     <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
-
 
     <!-- Initialize Firebase -->
     <script>
@@ -29,7 +28,6 @@
                 projectId: "anagram-583bf",
                 appId: "1:1051929128901:web:eaa4a34d3e6791b9df65ac"
             };
-
             firebase.initializeApp(firebaseConfig);
         }
     </script>
@@ -38,24 +36,16 @@
     <script src="js/firebase-auth.js"></script>
     <script src="js/firebase-chat.js"></script>
     <script src="js/firebase-status.js"></script>
-    <script src="~/js/contactService.js"></script>
-
+    <script src="js/contactService.js"></script>
 </head>
 
 <body>
     <div id="app" class="loading-screen">
-        <!-- Top teal dot -->
         <div class="loading-dot"></div>
-
-        <!-- Welcome text -->
         <h2 class="welcome-text">
             Welcome <span class="highlight">Gramist</span>
         </h2>
-
-        <!-- App name in cursive -->
         <h1 class="app-name">Anagram</h1>
-
-        <!-- Optional spinner -->
         <div class="spinner"></div>
     </div>
 
@@ -65,10 +55,16 @@
         <span class="dismiss">🗙</span>
     </div>
 
-
+    <!-- Blazor boot script -->
     <script src="_framework/blazor.webassembly.js"></script>
-    <!-- Optional: Remove this if not using service worker -->
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    <!-- Register service worker only if available -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .catch(err => console.warn("Service worker registration failed:", err));
+        }
+    </script>
 </body>
 
 </html>

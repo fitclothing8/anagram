@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "o8n+W5TB",
+  "version": "OhcsA3Ky",
   "assets": [
     {
       "hash": "sha256-AMIW0gNSE/rOv2XHbyh2yL2RcsLocXnkBZngxGigGI4=",
@@ -170,11 +170,11 @@ self.assetsManifest = {
       "url": "_framework/System.Threading.6wxzpv4ki1.wasm"
     },
     {
-      "hash": "sha256-i4vMteVO6MfrfsAGqolNgLH04E/fdLGmx2+Q8r6l2/Q=",
-      "url": "_framework/anagram.xtk8d7jeoa.wasm"
+      "hash": "sha256-J7Ym8+18iouETb/5hlf/n+LgEN5Zlz/XF2tss1urVfE=",
+      "url": "_framework/anagram.p8eb175f46.wasm"
     },
     {
-      "hash": "sha256-NpQirE7VdFKJC/I+yD2aabOv8SFj83V2WKAjWMBujz8=",
+      "hash": "sha256-RcQY6g+T6ASoblsaey0Sar32LFX6MWh4nGtFXtMh3JM=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -234,15 +234,15 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-Wiuc9TAopDPXvfuDcurIoCBM4tP7960cp+JdfNqQGW8=",
+      "hash": "sha256-+WbMDtpcpyJJFLz0mFDBnChfc2NliRBqfC5ZYGEk51E=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-lMM9lYRdIXqf17G9yJ080+3JJP2ORK8P9cc5dWpVthI=",
+      "hash": "sha256-qbxSULDfnJ++AAk6QykzovyEWNw5gxQXRTiwNSWZeUE=",
       "url": "js/contactService.js"
     },
     {
-      "hash": "sha256-F1ZQ+V8osdlmHbwQGgd0BowbLHOOKqd3LaHZYT6Cc6E=",
+      "hash": "sha256-M/Zo1K0UBVavu6D8ePziiuRxwqEdn8/KouJFrJjA+48=",
       "url": "js/firebase-auth.js"
     },
     {
